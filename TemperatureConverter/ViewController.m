@@ -11,7 +11,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *celsius;
 @property (weak, nonatomic) IBOutlet UITextField *fahrenheit;
-- (IBAction)convertPressed:(id)sender;
+- (IBAction)doConversion:(id)sender;
 - (IBAction)onTap:(id)sender;
 - (IBAction)celsiusChanged:(id)sender;
 - (IBAction)fahrenheitChanged:(id)sender;
@@ -21,6 +21,8 @@
 @end
 
 @implementation ViewController
+NSString *const CELSIUS_LABEL = @"Celsius";
+NSString *const FAHRENHEIT_LABEL = @"Fahrenheit";
 
 - (void)viewDidLoad
 {
@@ -34,7 +36,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)convertPressed:(id)sender {
+- (IBAction)doConversion:(id)sender {
+    if ([self.celsius.text length] == 0 && [self.fahrenheit.text length] == 0) {
+        self.celsius.text = CELSIUS_LABEL;
+        self.fahrenheit.text = FAHRENHEIT_LABEL;
+    }
     if ([self.celsius.text length] == 0) {
         float value = ([self.fahrenheit.text floatValue] - 32) * 5.0 / 9;
         self.celsius.text = [NSString stringWithFormat:@"%0.2f", value];
@@ -50,22 +56,22 @@
 
 - (IBAction)celsiusChanged:(id)sender {
     self.fahrenheit.text = @"";
-    [self convertPressed:sender];
+    [self doConversion:sender];
 }
 
 - (IBAction)fahrenheitChanged:(id)sender {
     self.celsius.text = @"";
-    [self convertPressed:sender];
+    [self doConversion:sender];
 }
 
 - (IBAction)fahrenheitTapped:(id)sender {
-    if ([self.fahrenheit.text isEqualToString:@"Fahrenheit"]) {
+    if ([self.fahrenheit.text isEqualToString:FAHRENHEIT_LABEL]) {
         self.fahrenheit.text = @"";
     }
 }
 
 - (IBAction)celsiusTapped:(id)sender {
-    if ([self.celsius.text isEqualToString:@"Celsius"]) {
+    if ([self.celsius.text isEqualToString:CELSIUS_LABEL]) {
         self.celsius.text = @"";
     }
 }
