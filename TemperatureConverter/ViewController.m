@@ -9,14 +9,14 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *celcius;
+@property (weak, nonatomic) IBOutlet UITextField *celsius;
 @property (weak, nonatomic) IBOutlet UITextField *fahrenheit;
 - (IBAction)convertPressed:(id)sender;
 - (IBAction)onTap:(id)sender;
-- (IBAction)celciusChanged:(id)sender;
+- (IBAction)celsiusChanged:(id)sender;
 - (IBAction)fahrenheitChanged:(id)sender;
 - (IBAction)fahrenheitTapped:(id)sender;
-- (IBAction)celciusTapped:(id)sender;
+- (IBAction)celsiusTapped:(id)sender;
 
 @end
 
@@ -35,11 +35,11 @@
 }
 
 - (IBAction)convertPressed:(id)sender {
-    if ([self.celcius.text length] == 0) {
+    if ([self.celsius.text length] == 0) {
         float value = ([self.fahrenheit.text floatValue] - 32) * 5.0 / 9;
-        self.celcius.text = [NSString stringWithFormat:@"%0.2f", value];
+        self.celsius.text = [NSString stringWithFormat:@"%0.2f", value];
     } else if ([self.fahrenheit.text length] == 0) {
-        float value = [self.celcius.text floatValue] * 9.0/5 + 32;
+        float value = [self.celsius.text floatValue] * 9.0/5 + 32;
         self.fahrenheit.text = [NSString stringWithFormat:@"%0.2f", value];
 
     }
@@ -48,13 +48,13 @@
     [self.view endEditing:YES];
 }
 
-- (IBAction)celciusChanged:(id)sender {
+- (IBAction)celsiusChanged:(id)sender {
     self.fahrenheit.text = @"";
     [self convertPressed:sender];
 }
 
 - (IBAction)fahrenheitChanged:(id)sender {
-    self.celcius.text = @"";
+    self.celsius.text = @"";
     [self convertPressed:sender];
 }
 
@@ -64,9 +64,9 @@
     }
 }
 
-- (IBAction)celciusTapped:(id)sender {
-    if ([self.celcius.text isEqualToString:@"Celcius"]) {
-        self.celcius.text = @"";
+- (IBAction)celsiusTapped:(id)sender {
+    if ([self.celsius.text isEqualToString:@"Celsius"]) {
+        self.celsius.text = @"";
     }
 }
 @end
