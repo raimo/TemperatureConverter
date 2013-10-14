@@ -21,22 +21,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="celsiusChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="3pK-jX-oFi"/>
-                                    <action selector="celsiusChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4ID-sC-I1w"/>
-                                    <action selector="celsiusTapped:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="GFw-8V-btD"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fahrenheit" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzc-1g-bDt">
                                 <rect key="frame" x="56" y="223" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="fahrenheitChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="DKv-UD-H06"/>
-                                    <action selector="fahrenheitChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="j0l-qD-VSX"/>
-                                    <action selector="fahrenheitTapped:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="DAj-eW-TuA"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myS-W0-hN0">
                                 <rect key="frame" x="261" y="163" width="20" height="21"/>
