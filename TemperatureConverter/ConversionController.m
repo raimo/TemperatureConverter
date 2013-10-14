@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Raimo Tuisku. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ConversionController.h"
 
-@interface ViewController ()
+@interface ConversionController ()
 @property (weak, nonatomic) IBOutlet UITextField *celsius;
 @property (weak, nonatomic) IBOutlet UITextField *fahrenheit;
 - (IBAction)doConversion:(id)sender;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ConversionController
 NSString *const CELSIUS_LABEL = @"Celsius";
 NSString *const FAHRENHEIT_LABEL = @"Fahrenheit";
 

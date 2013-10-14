@@ -15,7 +15,7 @@
 		D760D7F918020D2F003C6AA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D760D7F818020D2F003C6AA0 /* AppDelegate.m */; };
 		D760D7FC18020D2F003C6AA0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D760D7FA18020D2F003C6AA0 /* Main_iPhone.storyboard */; };
 		D760D7FF18020D2F003C6AA0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D760D7FD18020D2F003C6AA0 /* Main_iPad.storyboard */; };
-		D760D80218020D2F003C6AA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D760D80118020D2F003C6AA0 /* ViewController.m */; };
+		D760D80218020D2F003C6AA0 /* ConversionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D760D80118020D2F003C6AA0 /* ConversionController.m */; };
 		D760D80418020D2F003C6AA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D760D80318020D2F003C6AA0 /* Images.xcassets */; };
 		D760D80B18020D2F003C6AA0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D760D80A18020D2F003C6AA0 /* XCTest.framework */; };
 		D760D80C18020D2F003C6AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D760D7E818020D2F003C6AA0 /* Foundation.framework */; };
@@ -47,8 +47,8 @@
 		D760D7F818020D2F003C6AA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D760D7FB18020D2F003C6AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		D760D7FE18020D2F003C6AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		D760D80018020D2F003C6AA0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D760D80118020D2F003C6AA0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D760D80018020D2F003C6AA0 /* ConversionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversionController.h; sourceTree = "<group>"; };
+		D760D80118020D2F003C6AA0 /* ConversionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversionController.m; sourceTree = "<group>"; };
 		D760D80318020D2F003C6AA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D760D80918020D2F003C6AA0 /* TemperatureConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperatureConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D760D80A18020D2F003C6AA0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -118,8 +118,8 @@
 				D760D7F818020D2F003C6AA0 /* AppDelegate.m */,
 				D760D7FA18020D2F003C6AA0 /* Main_iPhone.storyboard */,
 				D760D7FD18020D2F003C6AA0 /* Main_iPad.storyboard */,
-				D760D80018020D2F003C6AA0 /* ViewController.h */,
-				D760D80118020D2F003C6AA0 /* ViewController.m */,
+				D760D80018020D2F003C6AA0 /* ConversionController.h */,
+				D760D80118020D2F003C6AA0 /* ConversionController.m */,
 				D760D80318020D2F003C6AA0 /* Images.xcassets */,
 				D760D7EF18020D2F003C6AA0 /* Supporting Files */,
 			);
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D760D80218020D2F003C6AA0 /* ViewController.m in Sources */,
+				D760D80218020D2F003C6AA0 /* ConversionController.m in Sources */,
 				D760D7F918020D2F003C6AA0 /* AppDelegate.m in Sources */,
 				D760D7F518020D2F003C6AA0 /* main.m in Sources */,
 			);
@@ -474,6 +474,7 @@
 				D760D81C18020D2F003C6AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D760D81D18020D2F003C6AA0 /* Build configuration list for PBXNativeTarget "TemperatureConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +483,7 @@
 				D760D81F18020D2F003C6AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
